@@ -29,14 +29,27 @@
             bottom: 0;
             width: 100%;
         }
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
     </style>
 </head>
 <body>
-    <header>Website Sederhana</header>
+    <header class="fade-in">Website Sederhana</header>
     <section>
-        <h1 class="fade-in">Selamat Datang di Website Sederhana</h1>
-        <p class="fade-in" style="animation-delay: 1s;">Ini adalah halaman utama website sederhana.</p>
+        <h1 class="fade-in" style="animation-delay: 0.5s;">HALO REK</h1>
+        <p class="fade-in" style="animation-delay: 1s;">KENALIN NAMA SAYA VAREL</p>
+        <p class="fade-in" style="animation-delay: 1s;">AKU MAHASISWA AKTIF PRODI S1 TEKNIK INFORMATIKA</p>
     </section>
-    <footer>&copy; 2025 Website Sederhana</footer>
+    <footer class="fade-in" style="animation-delay: 1.5s;">&copy; ANJAY SIAP JUGAK</footer>
 </body>
 </html>
