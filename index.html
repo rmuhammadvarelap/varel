@@ -32,6 +32,22 @@
             position: fixed;
             bottom: 0;
             width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
         }
         .slide-in {
             opacity: 0;
@@ -48,15 +64,40 @@
                 transform: translateY(0);
             }
         }
+        .bounce {
+            animation: bounce 1.5s infinite;
+        }
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        .footer-links {
+            display: flex;
+            gap: 15px;
+        }
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
-    <header class="slide-in" style="animation-delay: 0.5s;">WEB GUA TUH</header>
+    <header class="fade-in" style="animation-delay: 0.5s;">WEB GUA TUH</header>
     <section>
         <h1 class="slide-in" style="animation-delay: 0.5s;">HALO GUYS</h1>
-        <p class="slide-in" style="animation-delay: 1s;">SALAM KENAL, AKU VAREL</p>
-        <p class="slide-in" style="animation-delay: 1.5s;">AKU MAHASISWA AKTIF S1 TI ANGKATAN 24</p>
+        <p class="fade-in" style="animation-delay: 1s;">SALAM KENAL, AKU VAREL</p>
+        <p class="bounce" style="animation-delay: 1.5s;">AKU MAHASISWA AKTIF S1 TI ANGKATAN 24</p>
     </section>
-    <footer class="slide-in" style="animation-delay: 1.5s;"> ANJAY SIAP JUGAK</footer>
+    <footer class="slide-in" style="animation-delay: 1.5s;"> 
+        <span>ANJAY SIAP JUGAK</span>
+        <div class="footer-links">
+            <a href="#">Contact</a>
+            <a href="#">Profile</a>
+        </div>
+    </footer>
 </body>
 </html>
