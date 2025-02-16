@@ -44,6 +44,20 @@
             to {
                 opacity: 1;
             }
+        .slide-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: slideIn 1.5s forwards;
+        }
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
@@ -51,9 +65,9 @@
     <header class="fade-in" style="animation-delay: 0.5s;">WEB GUA TUH</header>
     <section>
         <h1 class="fade-in" style="animation-delay: 0.5s;">HALO GUYS</h1>
-        <p class="fade-in" style="animation-delay: 1s;">SALAM KENAL, AKU VAREL</p>
-        <p class="fade-in" style="animation-delay: 1.5s;">AKU MAHASISWA AKTIF S1 TI ANGKATAN 24</p>
+        <p class="slide-in" style="animation-delay: 1s;">SALAM KENAL, AKU VAREL</p>
+        <p class="slide-in" style="animation-delay: 1.5s;">AKU MAHASISWA AKTIF S1 TI ANGKATAN 24</p>
     </section>
-    <footer class="fade-in" style="animation-delay: 1.5s;"> ANJAY SIAP JUGAK</footer>
+    <footer class="slide-in" style="animation-delay: 1.5s;"> ANJAY SIAP JUGAK</footer>
 </body>
 </html>
