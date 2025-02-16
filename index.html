@@ -65,17 +65,6 @@
                 transform: translateY(0);
             }
         }
-        .bounce {
-            animation: bounce 1.5s infinite;
-        }
-        @keyframes bounce {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-10px);
-            }
-        }
         .footer-links {
             display: flex;
             gap: 15px;
@@ -94,18 +83,15 @@
     </style>
 </head>
 <body>
-    <header class="bounce" style="animation-delay: 0.5s;">WEB GUA TUH</header>
+    <header class="fade-in" style="animation-delay: 0.5s;">
+        
     <section>
         <h1 class="slide-in" style="animation-delay: 0.5s;">HALO GUYS</h1>
         <p class="fade-in" style="animation-delay: 1s;">SALAM KENAL, AKU VAREL</p>
         <p class="fade-in" style="animation-delay: 1.5s;">AKU MAHASISWA AKTIF S1 TI ANGKATAN 24</p>
     </section>
     <footer class="slide-in" style="animation-delay: 1.5s;"> 
-        <span>ANJAY SIAP JUGAK</span>
-        <div class="footer-links">
-            <a href="#">Contact</a>
-            <a href="#">Profile</a>
-        </div>
+        <span>CONTACT</span>
     </footer>
 </body>
 </html>
