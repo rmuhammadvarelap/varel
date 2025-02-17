@@ -17,6 +17,7 @@
             color: white;
             padding: 20px;
             font-size: 24px;
+            animation: shake 0.5s infinite alternate; /* Header bergoyang */
         }
         section {
             padding: 20px;
@@ -38,32 +39,21 @@
             padding: 10px 20px;
             flex-wrap: nowrap;
         }
-        .fade-in {
-            opacity: 0;
-            animation: fadeIn 2s forwards;
+        @keyframes shake {
+            0% { transform: rotate(0deg); }
+            25% { transform: rotate(2deg); }
+            50% { transform: rotate(0deg); }
+            75% { transform: rotate(-2deg); }
+            100% { transform: rotate(0deg); }
         }
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
         }
-        .slide-in {
-            opacity: 0;
-            transform: translateY(30px);
-            animation: slideIn 1.5s forwards;
-        }
-        @keyframes slideIn {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+
+        h1, p {
+            display: inline-block;
+            animation: bounce 1s infinite ease-in-out;
         }
         .footer-links {
             display: flex;
@@ -82,13 +72,13 @@
     </style>
 </head>
 <body>
-    <header class="fade-in" style="animation-delay: 0.5s;">WEB GUA TUH</header>
+    <header>WEB GUA TUH</header>
     <section>
-        <h1 class="slide-in" style="animation-delay: 0.5s;">HALO GUYS</h1>
-        <p class="fade-in" style="animation-delay: 1s;">SALAM KENAL, AKU VAREL</p>
-        <p class="fade-in" style="animation-delay: 1.5s;">AKU MAHASISWA AKTIF S1 TI ANGKATAN 24</p>
+        <h1>HALO GUYS</h1>
+        <p>SALAM KENAL, AKU VAREL</p>
+        <p>AKU MAHASISWA AKTIF S1 TI ANGKATAN 24</p>
     </section>
-    <footer class="slide-in" style="animation-delay: 1.5s;"> 
+    <footer> 
         <span>CONTACT</span>
     </footer>
 </body>
