@@ -36,15 +36,19 @@
             justify-content: space-between;
             align-items: center;
             padding: 10px 20px;
-            flex-wrap: nowrap;
+            flex-wrap: wrap;
         }
         .fade-in {
             opacity: 0;
             animation: fadeIn 2s forwards;
         }
         @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
         }
         .slide-in {
             opacity: 0;
@@ -61,31 +65,35 @@
                 transform: translateY(0);
             }
         }
-        .bounce {
-            animation: bounce 1.5s infinite;
+        .footer-links {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            flex: 1;
+            justify-content: flex-end;
+            min-width: 0;
         }
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {
-                transform: translateY(0);
-            }
-            40% {
-                transform: translateY(-10px);
-            }
-            60% {
-                transform: translateY(-5px);
-            }
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
     </style>
 </head>
 <body>
-    <header class="fade-in bounce" style="animation-delay: 0.5s;">WEB GUA TUH</header>
+    <header class="fade-in" style="animation-delay: 0.5s;">MY FIRST WEB</header>
     <section>
-        <h1 class="slide-in bounce" style="animation-delay: 0.5s;">HALO GUYS</h1>
-        <p class="fade-in bounce" style="animation-delay: 1s;">SALAM KENAL, AKU VAREL</p>
-        <p class="fade-in bounce" style="animation-delay: 1.5s;">AKU MAHASISWA AKTIF S1 TI ANGKATAN 24</p>
+        <h1 class="slide-in" style="animation-delay: 0.5s;">HALO GUYS</h1>
+        <p class="fade-in" style="animation-delay: 1s;">SALAM KENAL, SAYA VAREL</p>
+        <p class="fade-in" style="animation-delay: 1.5s;">SAYA MAHASISWA AKTIF S1 TI ANGKATAN 24</p>
     </section>
-    <footer class="slide-in"> 
+    <footer class="slide-in" style="animation-delay: 1.5s;"> 
         <span>CONTACT</span>
+        <div class="footer-links">
+            <a href="#">Profile</a>
+        </div>
     </footer>
 </body>
 </html>
