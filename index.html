@@ -80,20 +80,29 @@
             overflow: hidden;
             text-overflow: ellipsis;
         }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
     <header class="fade-in" style="animation-delay: 0.5s;">MY FIRST WEB</header>
     <section>
         <h1 class="slide-in" style="animation-delay: 0.5s;">HALO GUYS</h1>
+                <button onclick="showAlert()">MY PORTFOLIO</button>
         <p class="fade-in" style="animation-delay: 1s;">SALAM KENAL, SAYA VAREL</p>
         <p class="fade-in" style="animation-delay: 1.5s;">SAYA MAHASISWA AKTIF S1 TI ANGKATAN 24</p>
     </section>
     <footer class="slide-in" style="animation-delay: 1.5s;"> 
         <span>CONTACT</span>
-        <div class="footer-links">
-            <a href="#">Profile</a>
-        </div>
     </footer>
+        function showAlert() {
+            alert('OTW BUAT PAK');
+        }
 </body>
 </html>
