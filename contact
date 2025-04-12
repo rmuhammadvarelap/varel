@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Varel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+        header {
+            background: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+        }
+        section {
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 600px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        button:hover {
+            background: #45a049;
+        }
+        .social-options, .message-box {
+            display: none;
+            margin-top: 20px;
+        }
+        .social-options button, .message-box button {
+            margin: 5px;
+            background: #007bff;
+        }
+        .social-options button:hover, .message-box button:hover {
+            background: #0056b3;
+        }
+        textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        textarea:focus {
+            outline: none;
+            border-color: #4CAF50;
+        }
+        .message {
+            margin-top: 20px;
+            font-size: 18px;
+            color: green;
+            display: none;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>Contact Me</header>
+    <section>
+        <h1>Contact Me</h1>
+        <button id="contactButton">Contact Me</button>
+        <div class="social-options" id="socialOptions">
+            <p>Pilih media sosial untuk mengirim:</p>
+            <button onclick="selectPlatform('Facebook')">Facebook</button>
+            <button onclick="selectPlatform('Twitter')">Twitter</button>
+            <button onclick="selectPlatform('Instagram')">Instagram</button>
+        </div>
+        <div class="message-box" id="messageBox">
+            <p>Ketik pesan Anda untuk <span id="selectedPlatform"></span>:</p>
+            <textarea id="userMessage" rows="5" placeholder="Tulis pesan Anda di sini..."></textarea>
+            <button onclick="sendMessage()">Kirim Pesan</button>
+        </div>
+        <p class="message" id="successMessage">Sudah terkirim!</p>
+    </section>
+    <footer>&copy; 2025 Varel. All Rights Reserved.</footer>
+
+    <script>
+        const contactButton = document.getElementById('contactButton');
+        const socialOptions = document.getElementById('socialOptions');
+        const messageBox = document.getElementById('messageBox');
+        const successMessage = document.getElementById('successMessage');
+        const selectedPlatform = document.getElementById('selectedPlatform');
+        const userMessage = document.getElementById('userMessage');
+
+        let platform = '';
+
+        contactButton.addEventListener('click', () => {
+            socialOptions.style.display = 'block';
+            messageBox.style.display = 'none';
+            successMessage.style.display = 'none';
+        });
+
+        function selectPlatform(selected) {
+            platform = selected;
+            selectedPlatform.textContent = platform;
+            socialOptions.style.display = 'none';
+            messageBox.style.display = 'block';
+        }
+
+        function sendMessage() {
+            const message = userMessage.value.trim();
+            if (message === '') {
+                alert('Pesan tidak boleh kosong!');
+                return;
+            }
+            alert(`Pesan Anda untuk ${platform}: "${message}" telah dikirim.`);
+            messageBox.style.display = 'none';
+            successMessage.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
