@@ -5,12 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MY WEB</title>
     <style>
+        * {
+            background-size: cover;
+        }
+        
         body {
             font-family: Arial, sans-serif;
             text-align: center;
             margin: 0;
             padding: 0;
-            background-color: #87cefa; 
+            height: 100vh;
+            background-image: url(pajero-sport.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-size: 100%;
         }
         
         header {
@@ -40,8 +48,9 @@
             flex-wrap: wrap;
         }
         .fade-in {
-            opacity: 0;
+
             animation: fadeIn 2s forwards;
+            background: inherit;
         }
         @keyframes fadeIn {
             from {
@@ -55,6 +64,8 @@
             opacity: 0;
             transform: translateY(30px);
             animation: slideIn 1.5s forwards;
+            padding-bottom: 12.2vh;
+            max-width: 120vw;
         }
         @keyframes slideIn {
             from {
@@ -101,17 +112,19 @@
     </style>
 </head>
 <body>
+    <div class="container-utama">
+
     <header class="fade-in" style="animation-delay: 0.5s;">
         <div style="display: flex; justify-content: space-between; align-items: center; padding: 0 20px;">
             <span>WELCOME</span>
             <nav>
                 <ul style="list-style: none; margin: 0; padding: 0; display: flex; gap: 20px;">
-                    <li><a href="#home" style="color: white; text-decoration: none;">Home</a></li>
+                    <li><a href="#" style="color: white; text-decoration: none;">Home</a></li>
                     <li><a href="about.html" style="color: white; text-decoration: none;">About</a></li>
                     <li><a href="project.html" style="color: white; text-decoration: none;">Project</a></li>
                     <li><a href="contact.html" style="color: white; text-decoration: none;">Contact</a></li>
                 </ul>
-            </nav>
+            </nav>fa
         </div>
     </header>
     <section>
@@ -138,6 +151,7 @@
             </div>
         </div>
     </footer>
+</div>
     <script>
         function showAlert() {
             alert('OTW BUAT PAK');
