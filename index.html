@@ -3,15 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BUAT WEB KITA LAGIII</title>
+    <title>MY WEB</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             text-align: center;
             margin: 0;
             padding: 0;
-            background-color: #87cefa; 
+            background-image: url("rawr.JPG");
+            background-size: cover; /* Gambar akan menutupi seluruh layar */
+            background-repeat: no-repeat; /* Mencegah pengulangan gambar */
+            background-position: center; /* Memusatkan gambar */
+            height: 100vh; /* Pastikan tinggi halaman mencakup seluruh viewport */
+            position: relative;
         }
+        
         header {
             background: #4CAF50;
             color: white;
@@ -100,7 +106,19 @@
     </style>
 </head>
 <body>
-    <header class="fade-in" style="animation-delay: 0.5s;">WELCOME</header>
+    <header class="fade-in" style="animation-delay: 0.5s;">
+        <div style="display: flex; justify-content: space-between; align-items: center; padding: 0 20px;">
+            <span>WELCOME</span>
+            <nav>
+                <ul style="list-style: none; margin: 0; padding: 0; display: flex; gap: 20px;">
+                    <li><a href="#home" style="color: white; text-decoration: none;">Home</a></li>
+                    <li><a href="about.html" style="color: white; text-decoration: none;">About</a></li>
+                    <li><a href="project.html" style="color: white; text-decoration: none;">Project</a></li>
+                    <li><a href="contact.html" style="color: white; text-decoration: none;">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
     <section>
         <h1 class="slide-in" style="animation-delay: 0.5s;">HALO GUYS</h1>
         <button onclick="showAlert()">MY PORTFOLIO</button>
@@ -111,10 +129,6 @@
         <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; padding: 10px 20px;">
             <div style="flex: 1; text-align: left;">
                 <p>&copy; 2025 Varel. All Rights Reserved.</p>
-            </div>
-            <div class="footer-links" style="flex: 1; text-align: center;">
-                <a href="#about" style="margin-right: 15px;">About</a>
-                <a href="contact.html" style="margin-right: 15px;">Contact</a>
             </div>
             <div style="flex: 1; text-align: right;">
                 <a href="https://facebook.com" target="_blank" style="margin-right: 10px;">
